@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <!-- Color Variables & Styles -->
+    <style>
+      .bg-app { fill: #141414; }
+      .bg-panel { fill: #1e1e1e; }
+      .bg-header { fill: #2c2c2c; }
+      .bg-card { fill: #252525; }
+      .border-stroke { stroke: #383838; stroke-width: 1px; }
+      .text-title { fill: #ffffff; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 13px; }
+      .text-sub { fill: #94a3b8; font-family: 'Inter', sans-serif; font-size: 11px; }
+      .text-accent { fill: #6366f1; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; }
+      .btn-primary { fill: #4f46e5; rx: 4px; }
+      .btn-sec { fill: #383838; rx: 4px; }
+    </style>
+  </defs>
+
+  <!-- Background App Canvas -->
+  <rect class="bg-app" width="1440" height="900" />
+
+  <!-- Dot Grid Pattern -->
+  <g opacity="0.15">
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" />
+    </pattern>
+    <rect x="240" y="44" width="960" height="856" fill="url(#dotGrid)" />
+  </g>
+
+  <!-- TOP HEADER (Figma Style) -->
+  <rect class="bg-header" width="1440" height="44" />
+  <line x1="0" y1="44" x2="1440" y2="44" stroke="#383838" stroke-width="1" />
+
+  <!-- Logo -->
+  <rect x="12" y="10" width="24" height="24" rx="4" fill="url(#logoGrad)" />
+  <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6366f1" />
+    <stop offset="100%" stop-color="#a855f7" />
+  </linearGradient>
+  <text x="20" y="26" fill="#ffffff" font-family="Inter" font-weight="bold" font-size="12">❖</text>
+  <text x="44" y="27" class="text-title">MockForge Studio</text>
+
+  <!-- Center Title Pill -->
+  <rect x="580" y="10" width="280" height="24" rx="4" class="bg-panel border-stroke" />
+  <text x="592" y="26" class="text-sub">Project /</text>
+  <text x="642" y="26" class="text-title" font-size="12">Perspective_3D_Mockup.png</text>
+  <circle cx="830" cy="22" r="3" fill="#10b981" />
+
+  <!-- Right Header Buttons -->
+  <rect x="1230" y="10" width="80" height="24" class="btn-sec" />
+  <text x="1245" y="26" class="text-sub" fill="#ffffff">✨ Sample</text>
+  <rect x="1320" y="10" width="108" height="24" class="btn-primary" />
+  <text x="1335" y="26" fill="#ffffff" font-family="Inter" font-weight="500" font-size="12">📥 Export 4K</text>
+
+  <!-- LEFT SIDEBAR (Layers & Upload Assets) -->
+  <rect class="bg-panel" x="0" y="44" width="240" height="856" />
+  <line x1="240" y1="44" x2="240" y2="900" stroke="#2c2c2c" stroke-width="1" />
+
+  <text x="16" y="75" class="text-sub" font-weight="bold">DOCUMENT LAYERS</text>
+  <rect x="12" y="90" width="216" height="32" rx="4" class="bg-card border-stroke" />
+  <text x="24" y="110" class="text-title">📐 Perspective Quad Frame</text>
+
+  <rect x="12" y="130" width="216" height="32" rx="4" class="bg-card border-stroke" />
+  <text x="24" y="150" class="text-title">📱 UI Artwork Screenshot</text>
+
+  <rect x="12" y="170" width="216" height="32" rx="4" class="bg-card border-stroke" />
+  <text x="24" y="190" class="text-title">🖼️ Mockup Scene Background</text>
+
+  <!-- CENTER VIEWPORT (Perspective Scene Mockup Preview) -->
+  <g transform="translate(320, 140)">
+    <!-- Base Scene Box -->
+    <rect width="800" height="560" rx="8" fill="#121212" stroke="#2c2c2c" stroke-width="2" />
+
+    <!-- Mockup Screen Mock Representation -->
+    <polygon points="160,100 640,80 680,440 120,440" fill="#1e293b" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="6,4" />
+
+    <!-- Corner Node Handles -->
+    <circle cx="160" cy="100" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+    <text x="160" y="103" fill="#ffffff" font-size="8" font-family="Inter" text-anchor="middle">TL</text>
+
+    <circle cx="640" cy="80" r="8" fill="#3b82f6" stroke="#ffffff" stroke-width="2" />
+    <text x="640" y="83" fill="#ffffff" font-size="8" font-family="Inter" text-anchor="middle">TR</text>
+
+    <circle cx="680" cy="440" r="8" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+    <text x="680" y="443" fill="#ffffff" font-size="8" font-family="Inter" text-anchor="middle">BR</text>
+
+    <circle cx="120" cy="440" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+    <text x="120" y="443" fill="#ffffff" font-size="8" font-family="Inter" text-anchor="middle">BL</text>
+  </g>
+
+  <!-- Floating Viewport Controls -->
+  <rect x="620" y="840" width="200" height="32" rx="16" class="bg-header border-stroke" opacity="0.95" />
+  <text x="640" y="860" class="text-title">−</text>
+  <text x="680" y="860" class="text-sub" font-family="monospace">100%</text>
+  <text x="730" y="860" class="text-title">+</text>
+  <text x="770" y="860" class="text-accent">Fit</text>
+
+  <!-- RIGHT INSPECTOR PANEL (Design Properties & Physics) -->
+  <rect class="bg-panel" x="1200" y="44" width="240" height="856" />
+  <line x1="1200" y1="44" x2="1200" y2="900" stroke="#2c2c2c" stroke-width="1" />
+
+  <text x="1216" y="75" class="text-sub" font-weight="bold">PROPERTIES INSPECTOR</text>
+
+  <!-- Transform Controls -->
+  <text x="1216" y="105" class="text-sub">TRANSFORM &amp; QUAD</text>
+  <rect x="1216" y="115" width="100" height="28" class="btn-sec" />
+  <text x="1235" y="133" class="text-title" font-size="11">↺ Reset</text>
+  <rect x="1324" y="115" width="100" height="28" class="btn-sec" />
+  <text x="1345" y="133" class="text-title" font-size="11">⤢ Fit Screen</text>
+
+  <!-- Physics Controls -->
+  <text x="1216" y="175" class="text-sub">3D GLASS GLARE (35%)</text>
+  <rect x="1216" y="185" width="208" height="4" rx="2" fill="#2c2c2c" />
+  <rect x="1216" y="185" width="72" height="4" rx="2" fill="#6366f1" />
+
+  <text x="1216" y="215" class="text-sub">CORNER ROUNDING (20px)</text>
+  <rect x="1216" y="225" width="208" height="4" rx="2" fill="#2c2c2c" />
+  <rect x="1216" y="225" width="80" height="4" rx="2" fill="#6366f1" />
+
+  <text x="1216" y="255" class="text-sub">DEVICE NOTCH</text>
+  <rect x="1216" y="265" width="208" height="28" rx="4" class="bg-card border-stroke" />
+  <text x="1228" y="283" class="text-title" font-size="11">MacBook Notch</text>
+
+  <!-- Export Studio Button -->
+  <text x="1216" y="325" class="text-sub">EXPORT STUDIO</text>
+  <rect x="1216" y="335" width="208" height="36" class="btn-primary" />
+  <text x="1260" y="358" fill="#ffffff" font-family="Inter" font-weight="bold" font-size="12">📥 Export 4K Canvas</text>
+</svg>
