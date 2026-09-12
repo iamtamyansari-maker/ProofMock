@@ -39,7 +39,7 @@ git remote add origin https://github.com/iamtamyansari-maker/ProofMock.git
 
 echo.
 echo Pushing code to https://github.com/iamtamyansari-maker/ProofMock/tree/main ...
-git push -u origin main
+git push -u origin HEAD:main --force
 
 if %errorlevel% neq 0 (
     echo.

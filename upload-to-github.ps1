@@ -32,7 +32,7 @@ git remote remove origin 2>$null
 git remote add origin https://github.com/iamtamyansari-maker/ProofMock.git
 
 Write-Host "`nPushing code to GitHub..." -ForegroundColor Yellow
-git push -u origin main
+git push -u origin HEAD:main --force
 
 Write-Host "`n🎉 Success! ProofMock is live at https://github.com/iamtamyansari-maker/ProofMock/tree/main" -ForegroundColor Cyan
 Read-Host -Prompt "Press Enter to exit..."
